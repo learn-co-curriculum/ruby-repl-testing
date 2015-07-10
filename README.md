@@ -205,12 +205,12 @@ Your good buddy Freddy Mercury has recently developed a strawberry allergy. You 
 ~~~ruby
 
 contacts = {
-  "Jon Snow" => {
+  "Jon Snow": {
     name: "Jon",
     email: "jon_snow@thewall.we", 
     favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]
   },
-  "Freddy" => {
+  "Freddy": {
     name: "Freddy",
     email: "freddy@mercury.com",
     favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
@@ -236,7 +236,7 @@ contacts
 
 ~~~validation
 
-expect(response).to.eql({"Jon Snow"=>{:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"]}, "Freddy"=>{:name=>"Freddy", :email=>"freddy@mercury.com", :favorite_icecream_flavors=>["cookie dough", "mint chip"]}});
+expect(response).to.eql({"Jon Snow": {name: "Jon", email: "jon_snow@thewall.we", favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]}, "Freddy": {name: "Freddy", email: "freddy@mercury.com", favorite_icecream_flavors: ["cookie dough", "mint chip"]}});
 
 ~~~
 

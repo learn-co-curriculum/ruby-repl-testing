@@ -323,6 +323,37 @@ assert_equal(response, ["milk", "yogurt", "cheese", "carrots", "broccoli", "cucu
 
 %%%
 
+%%%
+
+### This is the Quiz Title - It is required.
+
+Here, you can write any necessary directions for the repl.  It will be parsed as markdown, and even accepts codeblocks!
+
+Write an array containing three strings, each saying "taylors gonna tay".
+
+
+The space delineated by the tildes below is used to set any initial values for the repl, and to declare the repl langauge.  The second tilde demarcated section is for the solution.  It contains the content you would like displayed when a user clicks "See Solution".  The final tilde demarcated section is for validations in the style of the Chai.js assertion library - http://chaijs.com/guide/styles/
+The `assert` and `expect` methods are both supported.  `should` is NOT supported.
+
+~~~javascript
+
+// Code your solution here
+
+~~~solution
+
+['taylors gonna tay', 'taylors gonna tay', 'taylors gonna tay']
+
+~~~validation
+
+// Validation go in this block - VALIDATIONS MAY CONTAIN DOUBLE QUOTES ONLY -- NO SINGLE QUOTES!!
+
+assert.equal(response.length, 3);
+expect(response).to.be.a("array");
+
+~~~
+
+%%%
+
 ## Resources: 
 
 * [Ruby Docs on Hashes](http://ruby-doc.org/core-2.2.0/Hash.html)

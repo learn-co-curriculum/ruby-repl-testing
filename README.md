@@ -317,7 +317,7 @@ groceries.values.flatten
 
 ~~~validation
 
-expect(response).to.eql(["milk", "yogurt", "cheese", "carrots", "broccoli", "cucumbers", "chicken", "steak", "salmon", "rice", "pasta"]);
+assert_equal(response, ["milk", "yogurt", "cheese", "carrots", "broccoli", "cucumbers", "chicken", "steak", "salmon", "rice", "pasta"])
 
 ~~~
 

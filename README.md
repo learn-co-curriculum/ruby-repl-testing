@@ -196,15 +196,9 @@ Now it's your turn! You're going to iterate through the levels of this hash to o
 
 **Reminder:** Iterating through nested hashes is hard, and (I'm pretty sure) you are not psychic. Meaning, you can't necessarily predict with perfect clarity what the key/value pair is at a certain level of the hash. **Using binding.pry** when you are iterating in upcoming labs to make sure you understand what the key/value pair is that you are iterating over. 
 
-%%%
-
-### Code Challenge I: Manipulating Nested Hashes
-
-Your good buddy Freddy Mercury has recently developed a strawberry allergy. You need to delete "strawberry" from his list of favorite icecreams. Iterate over the below array and when you reach the key of `:favorite_icecream_flavors`, check to see if the array contains strawberry, if it does, remove it. **Hint:** use the `delete_if` method to eliminate strawberry from the appropriate array.
-
-~~~ruby
-
-contacts = {
+<div>
+</div><div class='quiz-block'><div class='quiz-title'><h1>Code Challenge I: Manipulating Nested Hashes</h1></div><div class='question-block'><p class='question-title'><p>Your good buddy Freddy Mercury has recently developed a strawberry allergy. You need to delete &quot;strawberry&quot; from his list of favorite icecreams. Iterate over the below array and when you reach the key of <code>:favorite_icecream_flavors</code>, check to see if the array contains strawberry, if it does, remove it. <strong>Hint:</strong> use the <code>delete_if</code> method to eliminate strawberry from the appropriate array.</p>
+</p><div class='repl-answer-block'><textarea data-initial='contacts = {
   "Jon Snow": {
     name: "Jon",
     email: "jon_snow@thewall.we", 
@@ -222,25 +216,8 @@ contacts = {
 
 #do NOT touch the following line!
 
-contacts
-
-~~~solution
-
- contacts.each do |person, data|
-     data.each do |attribute, value|
-      	  if value.class == Array && value.include?("strawberry")
-           value.delete_if {|flavor| flavor == "strawberry"}
-       end
-     end
-  end
-
-~~~validation
-
-assert_equal(response, {"Jon Snow": {name: "Jon", email: "jon_snow@thewall.we", favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]}, "Freddy": {name: "Freddy", email: "freddy@mercury.com", favorite_icecream_flavors: ["cookie dough", "mint chip"]}})
-
-~~~
-
-%%%
+contacts' data-solution='[" contacts.each do |person, data|","     data.each do |attribute, value|","      \t  if value.class == Array && value.include?(\"strawberry\")","           value.delete_if {|flavor| flavor == \"strawberry\"}","       end","     end","  end"]' data-validation='["assert_equal(response, {\"Jon Snow\": {name: \"Jon\", email: \"jon_snow@thewall.we\", favorite_icecream_flavors: [\"chocolate\", \"vanilla\", \"mint chip\"]}, \"Freddy\": {name: \"Freddy\", email: \"freddy@mercury.com\", favorite_icecream_flavors: [\"cookie dough\", \"mint chip\"]}})"]' data-language='ruby' id='repl-0' class='repl'></textarea></div><input type='submit' value='SUBMIT' class='assessment-btn btn btn-sm'><input type='button' value='SEE SOLUTION' class='assessment-btn solution-btn btn btn-sm btn-info'><div class='solution-repl-holder'><textarea class='repl-solution'></textarea></div></div></div><div>
+</div>
 
 ## Higher Level Hash Methods
 
@@ -285,75 +262,39 @@ These are only a few of the many helpful methods out there. Be there to check ou
 
 Let's practice before you move on to the next lab: 
 
-%%% 
+<div>
+</div><div class='quiz-block'><div class='quiz-title'><h1>Code Challenge II: Manipulating Nested Hashes</h1></div><div class='question-block'><p class='question-title'><p>Below we have a nested hash of grocery items. Use the <code>.values</code> method to collect all of the values of the grocery type keys (:dairy, :meat, etc). The end return should be <em>one-dimensional</em> array of groceries that <em>only includes</em> actual foods (&quot;milk&quot;, &quot;carrots&quot;). </p>
 
-### Code Challenge II: Manipulating Nested Hashes
-
-Below we have a nested hash of grocery items. Use the `.values` method to collect all of the values of the grocery type keys (:dairy, :meat, etc). The end return should be *one-dimensional* array of groceries that *only includes* actual foods ("milk", "carrots"). 
-
-**Hint:** What happens when you call `.values` on a nested hash? What is the return value? How can you *flatten* an array of arrays? Try out your code in IRB to help you solve this one. 
-
-~~~ruby
-
-groceries = {
+<p><strong>Hint:</strong> What happens when you call <code>.values</code> on a nested hash? What is the return value? How can you <em>flatten</em> an array of arrays? Try out your code in IRB to help you solve this one.</p>
+</p><div class='repl-answer-block'><textarea data-initial='groceries = {
    dairy: ["milk", "yogurt", "cheese"],
    vegetable: ["carrots", "broccoli", "cucumbers"],
    meat: ["chicken", "steak", "salmon"],
    grains: ["rice", "pasta"]
 }
 
-#code you solution here
+#code you solution here' data-solution='[" ","groceries = {","   dairy: [\"milk\", \"yogurt\", \"cheese\"],","   vegetable: [\"carrots\", \"broccoli\", \"cucumbers\"],","   meat: [\"chicken\", \"steak\", \"salmon\"],","   grains: [\"rice\", \"pasta\"]","}","groceries.values.flatten"]' data-validation='["assert_equal(response, [\"milk\", \"yogurt\", \"cheese\", \"carrots\", \"broccoli\", \"cucumbers\", \"chicken\", \"steak\", \"salmon\", \"rice\", \"pasta\"])"]' data-language='ruby' id='repl-1' class='repl'></textarea></div><input type='submit' value='SUBMIT' class='assessment-btn btn btn-sm'><input type='button' value='SEE SOLUTION' class='assessment-btn solution-btn btn btn-sm btn-info'><div class='solution-repl-holder'><textarea class='repl-solution'></textarea></div></div></div><div>
+</div>
 
-~~~solution 
+<div>
+</div><div class='quiz-block'><div class='quiz-title'><h1>This is the Quiz Title - It is required.</h1></div><div class='question-block'><p class='question-title'><p>Here, you can write any necessary directions for the repl.  It will be parsed as markdown, and even accepts codeblocks!</p>
 
-groceries = {
-   dairy: ["milk", "yogurt", "cheese"],
-   vegetable: ["carrots", "broccoli", "cucumbers"],
-   meat: ["chicken", "steak", "salmon"],
-   grains: ["rice", "pasta"]
-}
+<p>Write an array containing three strings, each saying &quot;taylors gonna tay&quot;.</p>
 
-groceries.values.flatten
-
-~~~validation
-
-assert_equal(response, ["milk", "yogurt", "cheese", "carrots", "broccoli", "cucumbers", "chicken", "steak", "salmon", "rice", "pasta"])
-
-~~~
-
-%%%
-
-%%%
-
-### This is the Quiz Title - It is required.
-
-Here, you can write any necessary directions for the repl.  It will be parsed as markdown, and even accepts codeblocks!
-
-Write an array containing three strings, each saying "taylors gonna tay".
-
-
-The space delineated by the tildes below is used to set any initial values for the repl, and to declare the repl langauge.  The second tilde demarcated section is for the solution.  It contains the content you would like displayed when a user clicks "See Solution".  The final tilde demarcated section is for validations in the style of the Chai.js assertion library - http://chaijs.com/guide/styles/
-The `assert` and `expect` methods are both supported.  `should` is NOT supported.
-
-~~~javascript
-
-// Code your solution here
-
-~~~solution
-
-['taylors gonna tay', 'taylors gonna tay', 'taylors gonna tay']
-
-~~~validation
-
-// Validation go in this block - VALIDATIONS MAY CONTAIN DOUBLE QUOTES ONLY -- NO SINGLE QUOTES!!
-
-assert.equal(response.length, 3);
-expect(response).to.be.a("array");
-
-~~~
-
-%%%
+<p>The space delineated by the tildes below is used to set any initial values for the repl, and to declare the repl langauge.  The second tilde demarcated section is for the solution.  It contains the content you would like displayed when a user clicks &quot;See Solution&quot;.  The final tilde demarcated section is for validations in the style of the Chai.js assertion library - http://chaijs.com/guide/styles/<br>
+The <code>assert</code> and <code>expect</code> methods are both supported.  <code>should</code> is NOT supported.</p>
+</p><div class='repl-answer-block'><textarea data-initial='// Code your solution here' data-solution='["['taylors gonna tay', 'taylors gonna tay', 'taylors gonna tay']"]' data-validation='["// Validation go in this block - VALIDATIONS MAY CONTAIN DOUBLE QUOTES ONLY -- NO SINGLE QUOTES!!","assert.equal(response.length, 3);","expect(response).to.be.a(\"array\");"]' data-language='javascript' id='repl-2' class='repl'></textarea></div><input type='submit' value='SUBMIT' class='assessment-btn btn btn-sm'><input type='button' value='SEE SOLUTION' class='assessment-btn solution-btn btn btn-sm btn-info'><div class='solution-repl-holder'><textarea class='repl-solution'></textarea></div></div></div><div>
+</div>
 
 ## Resources: 
 
 * [Ruby Docs on Hashes](http://ruby-doc.org/core-2.2.0/Hash.html)
+
+* test
+* test
+
+1. test
+1. test
+1. [google](google.com)
+
+![flatironschool](http://flatironschool.com/images/logo.png)

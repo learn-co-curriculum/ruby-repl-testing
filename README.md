@@ -1,6 +1,6 @@
 # Manipulating Hashes
 
-## Objectives
+
 
 We'll be taking a closer look at multidimensional, or nested, hashes, iteration and higher level hash methods. We'll go through a few challenges together and then you'll complete the lab on your own. 
 

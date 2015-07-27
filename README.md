@@ -1,4 +1,4 @@
-# Manipulating Hashes
+# Manipulating
 
 ## Objectives
 

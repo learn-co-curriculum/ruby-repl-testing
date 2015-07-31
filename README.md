@@ -6,7 +6,7 @@ In this lesson, we'll be taking a closer look at multidimensional, or nested, ha
 
 ## More On Building Nested Hashes 
 
-Let's say we have the following nested hash: 
+
 
 ```ruby
 contacts = {
@@ -226,13 +226,13 @@ contacts
 
 ~~~solution
 
- contacts.each do |person, data|
-     data.each do |attribute, value|
-      	  if value.class == Array && value.include?("strawberry")
-           value.delete_if {|flavor| flavor == "strawberry"}
-       end
-     end
+contacts.each do |person, data|
+  data.each do |attribute, value|
+    if value.class == Array && value.include?("strawberry")
+      value.delete_if {|flavor| flavor == "strawberry"}
+    end
   end
+end
 
 ~~~validation
 

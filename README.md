@@ -1,4 +1,4 @@
-# Manipulating Hashes
+# **Manipulating Hashes**
 
 ## Objectives
 
@@ -226,13 +226,13 @@ contacts
 
 ~~~solution
 
- contacts.each do |person, data|
-     data.each do |attribute, value|
-      	  if value.class == Array && value.include?("strawberry")
-           value.delete_if {|flavor| flavor == "strawberry"}
-       end
-     end
+contacts.each do |person, data|
+  data.each do |attribute, value|
+    if value.class == Array && value.include?("strawberry")
+      value.delete_if {|flavor| flavor == "strawberry"}
+    end
   end
+end
 
 ~~~validation
 

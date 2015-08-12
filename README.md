@@ -2,7 +2,7 @@
 
 ## Objectives
 
-In this lesson, we'll be taking a closer look at multidimensional, or nested, hashes, iteration and higher level hash methods. We'll go through a few challenges together and then you'll complete the lab on your own. 
+> In this lesson, we'll be taking a closer look at multidimensional, or nested, hashes, iteration and higher level hash methods. We'll go through a few challenges together and then you'll complete the lab on your own. 
 
 ## More On Building Nested Hashes 
 
@@ -226,13 +226,13 @@ contacts
 
 ~~~solution
 
- contacts.each do |person, data|
-     data.each do |attribute, value|
-      	  if value.class == Array && value.include?("strawberry")
-           value.delete_if {|flavor| flavor == "strawberry"}
-       end
-     end
+contacts.each do |person, data|
+  data.each do |attribute, value|
+    if value.class == Array && value.include?("strawberry")
+      value.delete_if {|flavor| flavor == "strawberry"}
+    end
   end
+end
 
 ~~~validation
 

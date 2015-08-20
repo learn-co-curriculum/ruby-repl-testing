@@ -6,7 +6,7 @@
 
 ## More On Building Nested Hashes 
 
-Let's say we have the following nested hash: 
+
 
 ```ruby
 contacts = {

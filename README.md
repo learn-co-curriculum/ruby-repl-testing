@@ -357,3 +357,5 @@ expect(response).to.be.a("array");
 ## Resources: 
 
 * [Ruby Docs on Hashes](http://ruby-doc.org/core-2.2.0/Hash.html)
+
+<a href='https://learn.co/lessons/ruby-repl-testing' data-visibility='hidden'>View this lesson on Learn.co</a>

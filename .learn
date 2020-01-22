@@ -5,5 +5,5 @@ tags:
   - hash methods
 resources:
   - 1
-language:
-  - 0
+languages:
+  - ruby
